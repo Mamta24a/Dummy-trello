@@ -1,24 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
+import {
+  BrowserRouter as Router,
+  Route
+} from 'react-router-dom';
+import { Container } from 'react-bootstrap'
 import './App.css';
+import Header from './containers/Header/Header';
+import WoDnd from './containers/WoDnd/Boards/Boards';
+import Dnd from './containers/Dnd/Boards/Boards';
 
 function App() {
+
+  if (window.location.pathname === "/") {
+    window.location.replace("/wodnd");
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <Header />
+        <Container>
+          <Route path={["/wodnd"]} component={WoDnd} />
+          <Route path={["/dnd"]} component={Dnd} />
+        </Container>
+      </Router>
     </div>
   );
 }

@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+.navbar-dark .navbar-nav .nav-link a {
+    color: rgba(255, 255, 255, .5);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar-dark .navbar-nav .nav-link a:focus {
+    color: #fff;
+    font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar-dark .navbar-nav .nav-link a:hover {
+    color: rgba(255, 255, 255, .75);
+    text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar-brand {
+    font-family: cursive;
 }
 
-.App-link {
-  color: #61dafb;
+.text-white {
+    color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text-green {
+    color: #28a745 !important
+}
+
+.margin-tb-1 {
+    margin: 1em auto;
+}
+
+.margin-t-1 {
+    margin-top: 1em;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.float-right {
+    float: right !important;
+    margin-top: 3px;
+}
+
+.column-div {
+    overflow: auto;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.column-div::-webkit-scrollbar {
+    display: none;
+}
+
+.column {
+    display: inline-table;
+    background: white;
+    margin: 1em;
+    padding: 15px 1em 10px;
+    border-radius: 5px;
+    width: 345px;
+    background-color: #ebecf0;
+}
+
+.dragged .task {
+    opacity: 0.25;
+    border-top: 1px solid #999999;
+    border-bottom: 1px solid #ffffff;
+}
+
+.task {
+    background: white;
+    padding: 6px 11px;
+    margin: 10px 0;
+    border-radius: 3px;
+    box-shadow: 2px 2px 3px rgba(9, 30, 66, 0.15);
+    min-height: 40px;
+    white-space: normal;
+}
+
+.taskInput {
+    border: 1px solid gainsboro;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 1px 5px;
+    width: 247px;
+    height: 125px;
+    outline: none;
+    word-break: break-all;
+    display: inline-flex;
+}
+
+.taskView {
+    border: none;
+    font-size: 16px;
+    padding: 1px 5px;
+    width: 247px;
+    /* height: 23px; */
+    outline: none;
+    word-break: break-all;
+    display: inline-flex;
+}
+
+.text-gray {
+    color: gray
 }
